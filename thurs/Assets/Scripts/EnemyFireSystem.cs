@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// 敵人發射
+/// </summary>
 public class EnemyFireSystem : FireSystembase
 {
     [SerializeField, Header("生成間隔"), Range(0, 3)]
@@ -9,7 +12,7 @@ public class EnemyFireSystem : FireSystembase
 
     private void Awake()
     {
-        //延遲重複呼叫方法(方法名稱,延遲時間,間隔)
+        //延遲重複呼叫(方法名稱,延遲時間,間隔)
         InvokeRepeating("SpawnBullet", 0, interval);
     }
 }

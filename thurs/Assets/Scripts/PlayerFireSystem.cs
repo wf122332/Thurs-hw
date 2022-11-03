@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// ª±®aµo®g
+/// </summary>
+
 public class PlayerFireSystem : FireSystembase
 {
     private void Update()
@@ -12,9 +16,4 @@ public class PlayerFireSystem : FireSystembase
             SpawnBullet();
         }
     }
-
-
-
-
-
 }
