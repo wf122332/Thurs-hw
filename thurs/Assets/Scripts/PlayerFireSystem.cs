@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class PlayerFireSystem : FireSystembase
 {
-    // Start is called before the first frame update
-    void Start()
+    private void Update()
     {
-        
+        //press"space"> make bullet
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            SpawnBullet();
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
+
+
+
 }

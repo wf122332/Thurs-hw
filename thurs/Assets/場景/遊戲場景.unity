@@ -589,8 +589,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b390f728a3980943a4336b581f1fba5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabBullet: {fileID: 0}
+  prefabBullet: {fileID: 1956980968664308328, guid: e6fc63e4b1325154eac52211472c71d7, type: 3}
   pointSpawn: {fileID: 1818146733}
+  interval: 3
 --- !u!1 &792848167
 GameObject:
   m_ObjectHideFlags: 0
@@ -922,7 +923,7 @@ GameObject:
   - component: {fileID: 1415935112}
   - component: {fileID: 1415935114}
   - component: {fileID: 1415935115}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: "\u73A9\u5BB6"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2053,9 +2054,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1818146733, guid: 4280a38616442254daace0c295c1245e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818146733, guid: 4280a38616442254daace0c295c1245e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818146733, guid: 4280a38616442254daace0c295c1245e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 180
+      objectReference: {fileID: 0}
     - target: {fileID: 4763908833972657265, guid: 4280a38616442254daace0c295c1245e, type: 3}
       propertyPath: m_Name
       value: "\u6575\u6A5F"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4763908833972657265, guid: 4280a38616442254daace0c295c1245e, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4763908833972657268, guid: 4280a38616442254daace0c295c1245e, type: 3}
       propertyPath: m_RootOrder

@@ -9,5 +9,10 @@ public class FireSystembase : MonoBehaviour
     [SerializeField, Header("子彈生成點")]
     private Transform pointSpawn;
 
+    protected void SpawnBullet()
+    {
+        Instantiate(prefabBullet, pointSpawn.position, pointSpawn.rotation);
 
+
+    }
 }
