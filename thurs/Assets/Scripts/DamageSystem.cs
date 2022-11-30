@@ -2,29 +2,37 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-/// <summary>
-/// 傷害系統
-/// </summary>
-public class DamageSystem : MonoBehaviour
+namespace S
 {
-    [SerializeField, Header("會造成傷害的目標")]
-    private string nameTarget;
-    [SerializeField, Header("爆炸預製物")]
-    private GameObject prefabExplosion;
-
-
-    private void OnCollisionEnter2D(Collision2D collision)
+    /// <summary>
+    /// 傷害系統
+    /// </summary>
+    public class DamageSystem : MonoBehaviour
     {
-        //如果 踫到物件的名稱 就爆炸
-        if(collision.gameObject.name.Contains(nameTarget))
+        [SerializeField, Header("會造成傷害的目標")]
+        private string nameTarget;
+        [SerializeField, Header("爆炸預製物")]
+        private GameObject prefabExplosion;
+        [Header("受傷及爆炸音效")]
+        [SerializeField]
+        private AudioClip soundHit;
+        [SerializeField]
+        private AudioClip soundExplosion;
+
+
+        private void OnCollisionEnter2D(Collision2D collision)
         {
-            Instantiate(prefabExplosion, transform.position, transform.rotation);
-           
+            //如果 踫到物件的名稱 就爆炸
+            if (collision.gameObject.name.Contains(nameTarget))
+            {
+                Instantiate(prefabExplosion, transform.position, transform.rotation);
+
+                SoundManager.instance.Playsound(soundHit, new Vector2(0.7f, 0.9f));
+                SoundManager.instance.Playsound(soundExplosion, new Vector2(1.2f, 1.5f));
+    
             //刪除物件
-            Destroy(gameObject);
+                Destroy(gameObject);
+            }
         }
     }
-
-    
-
 }
